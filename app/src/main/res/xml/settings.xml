@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceCategory>
+
+    //Edit Text Preference
+    <EditTextPreference
+        android:defaultValue="@string/defValue_status"
+        android:key="@string/key_status"
+        android:title="@string/title_status"
+        app:dialogTitle="@string/title_dialog_status"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
+
+    //Switch Preference
+    <SwitchPreferenceCompat
+    android:defaultValue="false"
+    android:title="Auto reply"
+    android:summary="Automatically reply to messages"
+    android:key="@string/key_auto_reply" />
+
+
+</PreferenceCategory>
+
+</PreferenceScreen>
