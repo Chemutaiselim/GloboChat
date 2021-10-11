@@ -2,6 +2,7 @@ package com.pamela.globochat
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.navigation.fragment.NavHostFragment
 import androidx.preference.EditTextPreference
 import androidx.preference.Preference
@@ -24,10 +25,14 @@ override fun onCreatePreferences(savedInstancesStates: Bundle?, rootkey:String){
         navController.navigate(action)
         true
     }
+    
     // Read Preference values in a Fragment
     // Step 1: Get reference to the SharedPreferences (XML File)
+
     val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+
     // Step 2: Get the 'value' using the 'key'
+
     val autoReplyTime = sharedPreferences.getString(getString(R.string.key_auto_reply_time), "")
     Log.i("SettingsFragment", "Auto Reply Time: $autoReplyTime")
 
@@ -36,6 +41,16 @@ override fun onCreatePreferences(savedInstancesStates: Bundle?, rootkey:String){
 
     val statusPref = findPreference<EditTextPreference>(getString(R.string.key_status))
     statusPref?.setOnPreferenceChangeListener { preference, newValue ->
+        val newStatus = newValue as String
+        if (newStatus.contains("bad")) {
+            Toast.makeText(context, "Inappropriate Status. Please maintain community guidelines.",
+                    Toast.LENGTH_SHORT).show()
+
+            false   // false: reject the new value.
+        } else {
+            true     // true: accept the new value.
+        }
+    }
 
 
     }
