@@ -13,7 +13,24 @@
             android:title="@string/title_public_info"
             app:iconSpaceReserved="false" />
 
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/title_security"
+        app:iconSpaceReserved="false">
+
+    <Preference
+        android:key="@string/key_log_out"
+        android:title="@string/title_log_out"
+        app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="@string/key_delete_account"
+            android:summary="@string/summary_delete_account"
+            android:title="@string/title_delete_account"
+            app:iconSpaceReserved="true"
+            app:icon="@android:drawable/ic_menu_delete" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>
