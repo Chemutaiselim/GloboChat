@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory
+        android:title="@string/title_privacy"
+        app:iconSpaceReserved="false">
+
+        <MultiSelectListPreference
+            android:entries="@array/entries_public_info"
+            android:entryValues="@array/values_public_info"
+            android:key="@string/key_public_info"
+            android:title="@string/title_public_info"
+            app:iconSpaceReserved="false" />
+
+
+
+    </PreferenceCategory>
 </PreferenceScreen>
