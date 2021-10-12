@@ -29,6 +29,6 @@
         android:id="@+id/fragmentAccSettings"
         android:name="com.pamela.globochat.AccountSettingsFragment"
         android:label="Account"
-        tools:layout="@layout/fragment_account_settings" />
+        tools:xml="@xml/account_settings" />
 
 </navigation>
