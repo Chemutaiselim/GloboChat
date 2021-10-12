@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.navigation.fragment.NavHostFragment
-import androidx.preference.EditTextPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
+import androidx.preference.*
 
 //Class PreferenceFragmentCompat() used to Implement settings in android
 class SettingsFragment :PreferenceFragmentCompat() {
@@ -50,6 +47,17 @@ override fun onCreatePreferences(savedInstancesStates: Bundle?, rootkey:String){
         } else {
             true     // true: accept the new value.
         }
+    }
+
+    //update the summary
+
+    val notificationpref =findPreference<SwitchPreferenceCompat>(getString(R.string.key_new_msg_notif))
+    notificationpref?.summaryProvider= Preference.SummaryProvider<SwitchPreferenceCompat> { switchPref ->
+
+        if (switchPref?.isChecked!!)
+            "Status: ON"
+        else
+            "Status: OFF"
     }
 
 
