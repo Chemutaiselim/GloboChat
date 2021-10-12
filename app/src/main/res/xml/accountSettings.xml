@@ -28,6 +28,7 @@
             android:key="@string/key_delete_account"
             android:summary="@string/summary_delete_account"
             android:title="@string/title_delete_account"
+            app:iconSpaceReserved="true"
             app:icon="@android:drawable/ic_menu_delete" />
 
     </PreferenceCategory>
