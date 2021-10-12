@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import com.pamela.globochat.ChatListFragmentDirections
 
 
 class ChatListFragment : Fragment() {
