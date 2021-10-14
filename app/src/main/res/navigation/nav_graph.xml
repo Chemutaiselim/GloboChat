@@ -23,6 +23,7 @@
 
     <fragment
         android:id="@+id/fragmentSettings"
+        tools:xml="@xml/settings"
         android:label="Settings"
         android:name="com.pamela.globochat.SettingsFragment">
 
