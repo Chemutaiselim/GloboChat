@@ -9,7 +9,7 @@ import androidx.preference.*
 //Class PreferenceFragmentCompat() used to Implement settings in android
 class SettingsFragment :PreferenceFragmentCompat() {
 
-override fun onCreatePreferences(savedInstancesStates: Bundle?, rootkey:String){
+override fun onCreatePreferences(savedInstancesStates: Bundle?, rootkey:String?){
 
     setPreferencesFromResource(R.xml.settings, rootkey)
     val accSettingsPref = findPreference<Preference>(getString(R.string.key_account_settings))
