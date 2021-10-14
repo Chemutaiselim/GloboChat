@@ -12,6 +12,7 @@ class SettingsFragment :PreferenceFragmentCompat() {
 override fun onCreatePreferences(savedInstancesStates: Bundle?, rootkey:String?){
 
     setPreferencesFromResource(R.xml.settings, rootkey)
+
     val accSettingsPref = findPreference<Preference>(getString(R.string.key_account_settings))
 
     accSettingsPref?.setOnPreferenceClickListener {
