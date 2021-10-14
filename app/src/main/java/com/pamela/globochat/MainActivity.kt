@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         if (key == getString(R.string.key_auto_reply)) {
 
             val autoReply = sharedPreferences?.getBoolean(key, false)
-            if (autoReply!!) {
+            if (autoReply!= null) {
                 Toast.makeText(this, "Auto Reply: ON", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Auto Reply: OFF", Toast.LENGTH_SHORT).show()
